@@ -19,6 +19,8 @@
 #import "FIRUtilities.h"
 #import "Types.h"
 
+#import "RNSplashScreen.h"  // here
+
 @import Crashlytics;
 @import Fabric;
 @import Firebase;
@@ -55,7 +57,7 @@
     }];
 
     [jitsiMeet application:application didFinishLaunchingWithOptions:launchOptions];
-
+    [RNSplashScreen show];  // here
     return YES;
 }
 

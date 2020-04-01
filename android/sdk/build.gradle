@@ -79,6 +79,7 @@ dependencies {
     implementation project(':react-native-webview')
 
     testImplementation 'junit:junit:4.12'
+    implementation project(path: ':react-native-splash-screen')
 }
 
 

@@ -89,7 +89,6 @@ export class App extends AbstractApp {
      */
     componentDidMount() {
         super.componentDidMount();
-
         this._init.then(() => {
             // We set these early enough so then we avoid any unnecessary re-renders.
             const { dispatch } = this.state.store;

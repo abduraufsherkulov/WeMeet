@@ -24,9 +24,16 @@ import android.util.Log;
 import android.view.KeyEvent;
 import androidx.annotation.Nullable;
 
+import android.os.Bundle;
+
+// react-native-splash-screen >= 0.3.1
+import org.devio.rn.splashscreen.SplashScreen; // here
+
 import org.jitsi.meet.sdk.JitsiMeet;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
+
+
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
@@ -41,6 +48,11 @@ import java.util.Map;
  * launched will result in {@link MainActivity#onNewIntent(Intent)} being called.
  */
 public class MainActivity extends JitsiMeetActivity {
+       @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this);  // here
+        super.onCreate(savedInstanceState);
+    }
     /**
      * The request code identifying requests for the permission to draw on top
      * of other apps. The value must be 16-bit and is arbitrarily chosen here.

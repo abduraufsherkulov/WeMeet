@@ -15,7 +15,7 @@ import { AppRegistry } from 'react-native';
 
 import { App } from './features/app';
 import { IncomingCallApp } from './features/mobile/incoming-call';
-
+import SplashScreen from 'react-native-splash-screen'
 // It's crucial that the native loggers are created ASAP, not to lose any data.
 import { _initLogging } from './features/base/logging/functions';
 
@@ -46,6 +46,11 @@ class Root extends PureComponent<Props> {
      * @inheritdoc
      * @returns {ReactElement}
      */
+    componentDidMount() {
+    	// do stuff while splash screen is shown
+        // After having done stuff (such as async tasks) hide the splash screen
+        SplashScreen.hide();
+    }
     render() {
         return (
             <App
