@@ -388,11 +388,12 @@ class SettingsView extends AbstractSettingsView<Props, State> {
                         layout = 'column'>
                         <TextInput
                             autoCapitalize = 'none'
+                            editable={ false }
                             autoCorrect = { false }
                             onBlur = { this._onBlurServerURL }
                             onChangeText = { this._onChangeServerURL }
                             placeholder = { this.props._serverURL }
-                            value = { serverURL } />
+                            value = "https://meet.lbx.for.uz" />
                     </FormRow>
                     <FormRow
                         fieldSeparator = { true }
